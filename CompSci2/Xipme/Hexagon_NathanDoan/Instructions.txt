@@ -1,0 +1,35 @@
+Your Tasks:
+
+1. Implement the constructors:
+    a. default constructor
+    b. parameterized constructor
+    c. copy constructor
+    d. destructor
+
+2. Implement the assignment operator
+
+3. Implement functions:
+    -calculateArea
+    -setColor
+
+*Do not modify the .h file, or main.cpp. Implement the functions and main will automatically run tests.
+
+
+Notes:
+    Set the default state of a hexagon object to:
+        -sideLength: 0
+        -area: 0
+        -color: "no color"
+    
+    When Creating a hexagon with the parameterized constructor, use the interal private function calculateArea to set the area.
+
+Rubric:
+
+(1 point) default constructor
+(2 points) parameterized constructor
+(2 points) copy constructor
+(1 point) destructor
+(2 points) assignment operator
+(1 point) calculateArea
+(1 point) setColor
+

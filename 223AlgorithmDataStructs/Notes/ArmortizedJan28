@@ -1,0 +1,19 @@
+amortize: to write off an expenditure for an asset or patent by prorating over a certain period
+in CS, to spread the cost of operation over different cases
+
+reallocation cost (pushback, c++)
+eg. x, x/2, x/4...
+E x/2^i
+
+TOTAL
+-----
+# Ops in cycle
+
+for x, 0(x) / x = constant
+
+Next time:
+bubble sort
+insertion sort
+selection sort
+merge sort
+quick sort

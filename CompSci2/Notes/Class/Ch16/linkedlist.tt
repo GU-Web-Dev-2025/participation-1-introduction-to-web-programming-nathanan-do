@@ -1,0 +1,27 @@
+Linked list
+- dynamically sized
+- grows & shrinks
+- nodes
+theory: ( "x->" (head)x-> x-> x-> x-> nullptr) this is singly linked
+1st order is called "head"
+
+struct Node{
+    int value;
+    Node *next;
+}
+
+
+
+doubly linked lists
+struct Node{
+    int value;
+    Node*next;
+    Node*prev;
+}
+theory: ( nullptr <- (head)x <-> x <-> x <-> x <-> nullptr )
+
+
+
+
+circular linked list
+theory: ( (head)x-> x-> x-> x-> "1st x" )

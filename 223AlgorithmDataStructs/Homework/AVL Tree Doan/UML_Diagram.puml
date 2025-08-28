@@ -1,0 +1,29 @@
+@startuml
+class AVLNode {
+  - int key
+  - AVLNode* left
+  - AVLNode* right
+  - int height
+  + AVLNode(int k)
+}
+
+class AVLTree {
+  - AVLNode* root
+  + AVLTree()
+  + ~AVLTree()
+  + void insert(int key)
+  + void remove(int key)
+  + bool contains(int key)
+  + void printInOrder()
+  + void printPreOrder()
+  - int getHeight(AVLNode* node)
+  - int getBalance(AVLNode* node)
+  - AVLNode* rotateLeft(AVLNode* x)
+  - AVLNode* rotateRight(AVLNode* y)
+  - AVLNode* insert(AVLNode* node, int key)
+  - AVLNode* deleteNode(AVLNode* node, int key)
+  - AVLNode* minValueNode(AVLNode* node)
+}
+
+AVLTree --> AVLNode : uses
+@enduml

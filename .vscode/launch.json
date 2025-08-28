@@ -1,0 +1,59 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "main2",
+      "request": "launch",
+      "mainClass": "main2",
+      "projectName": "Homework_107efbd4"
+    },
+    {
+      "type": "java",
+      "name": "MainGameTest",
+      "request": "launch",
+      "mainClass": "MainGameTest",
+      "projectName": "Homework_107efbd4"
+    },
+    {
+      "type": "java",
+      "name": "Calculator",
+      "request": "launch",
+      "mainClass": "Calculator",
+      "projectName": "Homework_107efbd4"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "Homework_107efbd4"
+    },
+    {
+      "type": "java",
+      "name": "Farkle",
+      "request": "launch",
+      "mainClass": "Farkle",
+      "projectName": "Homework_107efbd4"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/natha/OneDrive - Gonzaga University/Documents/Homework",
+      "program": "c:/Users/natha/OneDrive - Gonzaga University/Documents/Homework/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Why use over array? 
+Bc arrays need to have their size compiled at compile time (size unchanging during runtime)
+use [] to read individual elements
+if vector is full, and you add a value, it will auto increase size
+
+#include <vector>
+
+vector<int> myVector; // vector of ints
+vector<double> myDVector; // vector of doubles
+vector<string> mySVector; // vector of strings
+vector<int*> intme; // vector of int pointers
+vector<int> vec(10); // set initial size  to 10
+vector<int> vec(10, 2); // set size to 10, all elements = 2
+
+vec.push_back(x); // stores 'x' at the last element in vec
+vec.pop_back(); // removes last element in vec
+vec.clear(); // completely removes elemetns in vec
+
+
+sizeof(); // shows size of thing in bytes
+pointers are 64bit
+

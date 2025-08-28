@@ -1,0 +1,31 @@
+Object oriented programming (hierarchy)
+- Program has data members(->states) and member functions(->behavior)
+
+inheritance - provides new way to create a new class from an existing class
+- specialized version of the class
+- "is a" term talks about inheritance (a car "is a" vehicle)
+- always "demotes" and never "promotes"
+
+you can make as many classes as you want
+
+class Student{
+...
+};
+
+// undergrad "is a" student
+// "public" allows the copy and access of all public variables in original class
+class Undergrad : public Student{
+    ...
+};
+
+types of terms in classes
+class x{
+public - can be accessed outside of the class
+private - can only be accessed by the class
+protected - can be accessed by class and children
+}
+
+class y : "type" x
+public x - nothing really changes, access stays the same. All public members are accessable
+protected x - public members become protected
+private x - public and protected members become private

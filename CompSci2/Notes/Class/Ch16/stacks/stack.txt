@@ -1,0 +1,9 @@
+Imagine you have peices of paper on a desk
+when you begin stacking them, you can only access the top
+The bottom is inaccessable until you remove the layers above
+
+push: add something to the top
+pop: remove something from..."top"
+
+FILO - First in, Last out
+

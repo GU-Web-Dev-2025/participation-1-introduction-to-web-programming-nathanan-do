@@ -1,0 +1,55 @@
+/* Context: using a constructor part of a class
+looks like:
+
+class Rectangle{
+    Rectangle();
+    Rectangle(parameters);
+}
+
+Rectangle r1(parameters);
+Rectangle r2(r1);
+or
+Rectangle r3 = r1;
+
+when using a pointer... int *r1 or new r1 = 5;
+copying a 'Rectangle' will copy values, but changing a value stored in heap will affect all 'Recatangle' copies
+
+
+using const
+to ensure an object is not modified during copying process
+basic copy shsould look like:
+Rectangle (const Rectangle &original);
+Rectangle (const Rectangle &original){
+    id = int new;
+    *id = *original.id;
+}
+
+
+
+overloading =, literally
+
+x.operator=(y);
+    this copies 
+y to x in a pointer, but first we have to create the overloaded function
+void operator=(const Rec &val);
+
+
+
+Rectangle& Rectangle::operator=(const Rectangle &val){
+delete id; // or else memory leak
+id = new int;
+*id = *val.id;
+}
+
+
+
+Destructors (for dynamic memory)
+originally:
+~Rectangle();
+
+but when using heap:
+make a function
+Rectangle::~Rectangle(){
+delete id;
+}
+*/

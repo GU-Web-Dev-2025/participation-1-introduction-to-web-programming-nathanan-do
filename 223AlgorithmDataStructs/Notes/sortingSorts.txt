@@ -1,0 +1,80 @@
+Jan 31 2025
+
+Types of sorting:
+
+insertion sort
+- creates a sublist with 1st two elements of list
+- adds next element to the sublist and compares it to the values, inserting the value where appropriate
+- go through the original list
+
+selection sort
+- read all numbers while keeping track of the lowest value
+- at the end of the reading, SWAP the value with first element of the list
+- Now, go through against with offset of +1
+
+
+HW: best & worst case senario for each (e.g. linear or n^2)
+
+
+merge sort O(nlogn)
+- break list into sublists
+- sort sublist, front to back
+- recrate list while adding values from sorted sublist, from back to front 
+
+How to build a merge functions
+1) helper - Mergesort(cont)
+2) private function - Mergesort(cont;'  ')
+3) - Merge(cont; cont)
+M(left, right)
+- assume  left and right are sorted
+- then compare the left and right vectors adding lowest or highest
+- leaving a single object (because there is nothing else to compare) then add THAT object to the reemerging list
+how to:
+    if(L[0] > R[0]){
+        pushback(R[0])
+    }else {
+        pushback(L[0])
+    }
+if (L.size == 0){
+    while(R.size != 0){
+        pushback(R[0])
+        right.remove(0)
+    }
+}else{
+    while (left.size > 0){
+        pushback(left[0])
+        left.remove(0)
+    }
+}
+
+
+
+Ms(4312)
+    Ms([4312], 0 ,3)
+        
+for sorting 73518462
+Start with helper (MS(cont))
+2) MS(cont, start, end)
+3) Merge(left and right)(take apart) - indexes 0-3 and 4-7
+
+4) Stop condition - element count = 1
+
+
+
+
+Quicl sort
+idea: choose a pivot
+1 2 3
+pivot: 2
+num <2: 1
+num >2: 3
+
+3 6 39 302 9 2 5
+pivot: can be anything, choose according to data, pivot does not show up, repeated values do
+num <3: 2
+num >3: 6, 39, 302, 9, 5
+If a pivot yields only 1 number, save it
+then move down, exclusing the previous pivot number
+pivot: 6 
+num <6: 5
+num >6: 9, 39, 302

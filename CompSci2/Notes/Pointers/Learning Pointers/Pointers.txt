@@ -1,0 +1,25 @@
+Address vs value:
+Address of a variable - where the variable is stored in memory
+Value - the numerical value of the data
+
+Pass by reference (&x)
+allows for a declared variable (or array) and its value to change with respect to its original value from a function
+
+When printing out an array, use a for loop because it's exact;
+- each seperate value in the array is known as an element
+When naming array globally, all values are set to '0'
+
+
+the (*) symbol is used for dereferencing (POINTERS)
+- Pointers:
+int *intptr = nullptr; (note to always set your declared pointer to "nullptr" s.t. it will not aceess random part of RAM)
+
+- Read as:
+"intptr can hold the address of an int"
+int num = 5;
+int *intptr;
+*intptr = &num;
+
+The reason: if you make a change to either variable, it will change the other
+When printing with (*), it shows the VALUE 
+When printing without (*), it shows the ADDRESS 0

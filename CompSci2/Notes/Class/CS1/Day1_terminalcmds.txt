@@ -1,0 +1,29 @@
+// *In shell console, not console
+// ls list files
+// cd change directory
+// pwd "print working directory" (where you're at)
+// g++ makes new directory
+// mkdir ^^^
+// 'touch' creates a new file
+// ./ read file (aka execute file)
+// clear cleans terminal
+// history Allows user to look at all commands typed in console (arrow keys usable)
+// When compiling a file, it'll automatically name it 'a.out' to compile and rename, [g++ 'file name' -Wall -o 'New file name']
+
+Makefile targets
+  make 
+    compile a.out (compiles program)
+    run a.out (runs program)
+    clean (rm program)
+    all
+
+  eg. 
+  [compile:
+    g++ -Wall -o HelloWorldProg]
+  [clean:
+    rm HelloWorldProg]
+
+  if you have multiple makefile targets, you can choose one with:
+    [make compile]
+    [make clean]
+  and it will run commands within the 'tabbed' section m

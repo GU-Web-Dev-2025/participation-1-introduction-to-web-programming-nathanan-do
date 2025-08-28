@@ -1,0 +1,17 @@
+sorting algorithms
+- Bubble sort (reads first and second num, swap if neccessary)
+- insertion sort (finds smallest num, places it to the front)
+- linear search
+- binary search
+
+heap and stack
+
+Binary and Hex
+
+Pointers
+- const printing
+- dereferencing
+- memory addressing
+- nullptr (always set your declared pointer to "nullptr" s.t. it will not aceess random part of RAM)
+
+counting hexadeciamals

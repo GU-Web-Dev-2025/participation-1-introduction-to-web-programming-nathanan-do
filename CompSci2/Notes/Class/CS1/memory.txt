@@ -1,0 +1,8 @@
+integers contain up to 4 bytes of data
+
+when declaring a variable it is stored in "stack" memory (non-permanent)
+the "heap" is more permanent
+decleare through
+x = new int; (THIS WILL NOT EVER DELETE THE VALUE FROM MEMORY; MUST DELETE LATER)
+delete x;
+

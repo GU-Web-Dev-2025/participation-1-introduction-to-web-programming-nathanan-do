@@ -1,0 +1,128 @@
+#include "riverTree.hpp"
+
+//----------------------------------------------------------------
+// Node implementation
+Node::Node(const std::string& n,
+           const std::string& f,
+           bool ex)
+  : name(n), feature(f), exit(ex),
+    next(nullptr), prev(nullptr),
+    left(nullptr), right(nullptr)
+{}
+
+//----------------------------------------------------------------
+// RiverTree lifecycle
+RiverTree::RiverTree()
+  : mouth(nullptr)
+{}
+
+RiverTree::~RiverTree() {
+  // recursively delete entire structure (e.g. post‑order)
+  std::function<void(Node*)> destroy = [&](Node* n){
+    if(!n) return;
+    destroy(n->left);
+    destroy(n->right);
+    destroy(n->next);
+    delete n;
+  };
+  destroy(mouth);
+}
+
+//----------------------------------------------------------------
+// addMain: append to the main Columbia chain
+Node* RiverTree::addMain(const std::string& name,
+                         const std::string& feature,
+                         bool exitFlag)
+{
+  Node* newNode = new Node(name, feature, exitFlag);
+  if (!mouth) {
+    mouth = newNode;
+  } else {
+    // find tail of main chain
+    Node* tail = mouth;
+    while (tail->next) tail = tail->next;
+    tail->next = newNode;
+    newNode->prev = tail;
+  }
+  return newNode;
+}
+
+//----------------------------------------------------------------
+// addTributary: hook left/right off of an existing node
+void RiverTree::addTributary(const std::string& parentName,
+                             const std::string& leftName,
+                             const std::string& rightName)
+{
+  Node* parent = find(parentName);
+  if (!parent) {
+    std::cerr << "Parent \"" << parentName << "\" not found\n";
+    return;
+  }
+  if (!leftName.empty())
+    parent->left  = new Node(leftName,  "River");
+  if (!rightName.empty())
+    parent->right = new Node(rightName, "River");
+}
+
+//----------------------------------------------------------------
+// find: simple DFS over next/left/right links
+Node* RiverTree::find(const std::string& name) const {
+  std::function<Node*(Node*)> dfs = [&](Node* n)->Node* {
+    if (!n) return nullptr;
+    if (n->name == name) return n;
+    if (auto r = dfs(n->left))  return r;
+    if (auto r = dfs(n->right)) return r;
+    return dfs(n->next);
+  };
+  return dfs(mouth);
+}
+
+//----------------------------------------------------------------
+// interactiveTraverse: let the user walk the river network
+void RiverTree::interactiveTraverse() const {
+  if (!mouth) {
+    std::cout << "River is empty\n";
+    return;
+  }
+  Node* cur = mouth;
+  std::stack<Node*> history;
+
+  while (true) {
+    std::cout << "\nYou are at: " << cur->name
+              << " [" << cur->feature << "]\n";
+    std::cout << "[M]ain → " 
+              << (cur->next ? cur->next->name : "<end>") << "\n";
+    std::cout << "[L]eft → " 
+              << (cur->left ? cur->left->name : "<none>") << "\n";
+    std::cout << "[R]ight → " 
+              << (cur->right ? cur->right->name : "<none>") << "\n";
+    std::cout << "[B]ack → " 
+              << (history.empty() ? "<none>" : history.top()->name) << "\n";
+    std::cout << "[Q]uit\n";
+    char c; std::cin >> c;
+
+    if (c=='M' || c=='m') {
+      if (cur->next) { history.push(cur); cur = cur->next; }
+      else std::cout << "No further main path.\n";
+    }
+    else if (c=='L' || c=='l') {
+      if (cur->left) { history.push(cur); cur = cur->left; }
+      else std::cout << "No left tributary.\n";
+    }
+    else if (c=='R' || c=='r') {
+      if (cur->right) { history.push(cur); cur = cur->right; }
+      else std::cout << "No right tributary.\n";
+    }
+    else if (c=='B' || c=='b') {
+      if (!history.empty()) { cur = history.top(); history.pop(); }
+      else std::cout << "Cannot go back.\n";
+    }
+    else if (c=='Q' || c=='q') {
+      std::cout << "Exiting traverse.\n";
+      break;
+    }
+  }
+}
+
+// (Optional) saveToBinary could do a preorder dump of each node’s data
+// in fixed‐size records so you can fast‑load next time.

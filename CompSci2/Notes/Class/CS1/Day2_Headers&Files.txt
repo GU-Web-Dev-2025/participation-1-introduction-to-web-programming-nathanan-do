@@ -1,0 +1,23 @@
+Function defining safeguards
+#ifdef
+#define
+
+FileIO
+(include, declare, open, use, then close)
+#include <fstream>
+ifstream: for input from a files
+ofstream: for outsput to a files
+fstream: input and output to a file
+
+Define stream: streams are bools (if open set to true, closed is set to false)
+fstream infile;
+
+infile.open("text.txt");
+outfile.open
+
+infile.close();
+outfile.close
+
+outfile << "texts and" << variables;
+
+Good convention: when using a file, use a "const string" s.t. the file name will not change unlesss you change it at the declaration

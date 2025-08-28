@@ -1,0 +1,12 @@
+Three file format
+- main.cpp (driver program)
+- program.cpp (defines functions)
+- program.h (declares functions)
+
+
+In the headers:
+- header gaurds
+- declaring funtions
+
+In the main:
+- function to run code

@@ -1,0 +1,11 @@
+1 byte = 8 bits
+Computer can only call bytes and not singular bits
+
+C vs C++
+C, same as C++ without objects and libraries
+C uses structs (difference is that Structs don't have functions -> states and behaviors)
+
+
+printf("[optional statement] % [decimal number][d,f,s,x]", name);
+
+Hexadecimal

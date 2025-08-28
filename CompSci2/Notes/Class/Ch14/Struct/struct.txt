@@ -1,0 +1,43 @@
+// c-string: null string operand
+// Looks like (\0) in string statement e.g. "Hello World!\0"
+
+// ADT - "Abstract Data Types" - Have their own range and set operations
+//eg "dog" is an abstraction : "poodle" is a absolute
+
+// Structs allows for variables to be put inside
+/* start with (1st letter in variable usually is capitalized)
+
+
+
+// list initialization variables
+struct Tag{
+int suck;
+double balls;
+string booty;
+};
+
+
+Tag enlargee;
+// this creates an abstract struct called enlargee;
+// The benefit: you can clone many data types and change each indiviual one (great for organizing many accounts, with many attibutes)
+
+enlragee.suck = 123;
+// sets value of int suck as 123
+// can use intitialization list
+Tag enlarge = {1, 2.34, "herro"};
+matches decending order of initialization in struct
+// cannot skip! eg: Tag enlarge = {1, , "herro"};
+// can leave out ends eg: Tag enlarge = {1, 2.34};
+
+functions with structs
+void (Tag &enlargee){ 
+// as you can see, Tag initialized enlargee in the parameter
+// You DONT want to copy the original struct (pass by value); you WANT to pass the reference and dchange the original
+cout << enlarge.suck;
+}
+
+
+Pass by const reference
+void(cont Tag &enlar)
+// Prevents copying from original and prevents original from being modified.
+*/

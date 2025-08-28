@@ -1,0 +1,46 @@
+Java and functions
+Functions: lowest level of coding, does not exist on its own
+How to compile code w/ Java
+
+[ Return type first, then function name ]
+e.g. function:
+void Name (parameters) {
+    ...
+}
+
+usual visual of a java main function:
+void main () {
+    ...
+}
+
+Class: a container for related functions
+Java programs contain at least one function
+Functions go into the class
+
+
+now put them together:
+class main{
+    function specifictask () {
+        ...
+    }
+}
+
+e.g.
+class main{
+    void textoutput{
+        ...
+    }
+}
+
+
+declare the security of the class (publuc/private?)
+e.g.
+public class HelloWorld{
+    
+    public static void main(string[] args) {
+        
+        system.out.println("Hello world");
+    
+    }
+
+}

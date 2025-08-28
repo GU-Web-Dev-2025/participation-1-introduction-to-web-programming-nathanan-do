@@ -1,0 +1,37 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Test for Part 1 and Part 2
+      id: test-for-part-1-and-part-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Test for Part 1 and Part 2
+        setup-command: g++ vector.cpp -o main
+        command: "./main"
+        input: ''
+        expected-output: |-
+          After adding elements: Size = 50000, Capacity = 65536
+          After resizing: Size = 25000, Capacity = 65536
+          After shrink_to_fit(): Size = 25000, Capacity = 25000
+          Memory usage of std::vector<bool>: 1256 bytes
+          Memory usage of std::vector<char>: 10000 bytes
+        comparison-method: contains
+        timeout: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TEST-FOR-PART-1-AND-PART-2_RESULTS: "${{steps.test-for-part-1-and-part-2.outputs.result}}"
+      with:
+        runners: test-for-part-1-and-part-2

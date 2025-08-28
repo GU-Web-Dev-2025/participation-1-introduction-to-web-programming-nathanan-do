@@ -1,0 +1,98 @@
+.global _start
+.text
+_start:
+
+# print the message string before sorting
+    mov     $1, %rax                # syscall: write
+    mov     $1, %rdi
+    mov     $message, %rsi
+    mov     $16, %rdx
+    syscall
+
+# Sort the string (call bubble_sort)
+    lea     message(%rip), %rdi     # pass &message as argument to bubble_sort
+    call    bubble_sort
+
+# print the message string after sorting
+    mov     $1, %rax
+    mov     $1, %rdi
+    mov     $message, %rsi
+    mov     $16, %rdx
+    syscall
+
+# exit the program
+    movq    $60, %rax
+    xor     %rdi, %rdi
+    syscall
+
+# ---------------------------#
+# Function: bubble_sort      #
+# Args:                      #
+#   %rdi = pointer to string #
+# ---------------------------#
+bubble_sort:
+    push    %rbp                    # save base pointer
+    mov     %rsp, %rbp              # set new base pointer
+    push    %rbx                    # callee-saved
+
+    mov     $0, %rcx                # outer loop i = 0
+
+.bubble_outer:
+    cmp     $14, %rcx               # if i >= 14, done
+    jge     .done                   # jump to end if outer loop finished
+
+    mov     $0, %rdx                # inner loop j = 0
+
+.bubble_inner:  
+    mov     $14, %r8                
+    sub     %rcx, %r8               
+    cmp     %r8, %rdx               
+    jge     .next_outer
+
+    mov     %rdi, %rsi              # %rsi = base address
+    add     %rdx, %rsi              # rsi = &str[j]
+
+    call    compare_and_swap        # call compare_and_swap(rsi)
+
+    inc     %rdx
+    jmp     .bubble_inner           # repeat inner loop
+
+.next_outer:
+    inc     %rcx
+    jmp     .bubble_outer           # repeat outer loop
+
+.done:
+    pop     %rbx                    # restore callee-saved register
+    pop     %rbp                    # restore base pointer
+    ret
+
+# ---------------------------#
+# Function: compare_and_swap #
+# Args:                      #
+#   %rsi = pointer to str[j] #
+# ---------------------------#
+compare_and_swap:
+    push    %rbp                    # save base pointer
+    mov     %rsp, %rbp              # set new base pointer
+    push    %r10
+    push    %r11                    # save callee-saved register
+
+    movb    (%rsi), %r10b         # Load str[j] into r10b
+    movb    1(%rsi), %r11b        # Load str[j+1] into r11b
+
+    cmpb    %r11b, %r10b          # Compare str[j] > str[j+1]?
+    jle     .no_swap              # No swap needed if in order
+
+# swap
+    movb    %r11b, (%rsi)         # str[j] = str[j+1]
+    movb    %r10b, 1(%rsi)        # str[j+1] = str[j]
+
+.no_swap:
+    pop     %r11
+    pop     %r10
+    pop     %rbp
+    ret
+
+.data
+message:
+    .ascii "GONZAGABULLDOGS\n"

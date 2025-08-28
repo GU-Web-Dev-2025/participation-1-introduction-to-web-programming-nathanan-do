@@ -1,0 +1,3 @@
+Virtual member function - redefines a functions definition based on which class its derived from
+- form of overloading
+- instead of taking in parameters, you code it in definitions

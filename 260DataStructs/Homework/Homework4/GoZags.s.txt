@@ -1,0 +1,38 @@
+.global _start
+.text
+_start:
+
+    lea     message(%rip), %rsi   # Load address of message into %rsi
+    mov     $0, %rcx              # index = 0
+
+convert_loop:
+    movzbq  (%rsi,%rcx,1), %rax   # Load byte at message[rcx] into %rax
+    cmp     $0, %rax              # End of string?
+    je      done_convert
+
+    cmp     $'a', %al
+    jl      skip                  # If char < 'a', skip
+    cmp     $'z', %al
+    jg      skip                  # If char > 'z', skip
+
+    sub     $0x20, %al            # Convert to uppercase
+    mov     %al, (%rsi,%rcx,1)    # Store back
+
+skip:
+    inc     %rcx
+    jmp     convert_loop
+
+done_convert:
+    mov     $1, %rax              # syscall: write
+    mov     $1, %rdi              # stdout
+    lea     message(%rip), %rsi
+    mov     $9, %rdx              # message length
+    syscall
+
+                                  # Exit syscall
+    mov     $60, %rax
+    xor     %rdi, %rdi
+    syscall
+
+.section .data
+message: .ascii "Go Zags!\n"

@@ -1,0 +1,51 @@
+-------------------------------------
+1. Print Reverse
+2. Calculate E
+3. Calculate exponent
+4. Quit program
+-------------------------------------
+Enter your choice: 
+1    
+Enter a number to reverse:
+43267000 
+Reversified number: 00076234
+
+
+
+-------------------------------------
+1. Print Reverse
+2. Calculate E
+3. Calculate exponent
+4. Quit program
+-------------------------------------
+Enter your choice: 
+2
+Enter a number for iterations:
+6543
+The value of E based on iterations: 2.71807
+
+
+
+-------------------------------------
+1. Print Reverse
+2. Calculate E
+3. Calculate exponent
+4. Quit program
+-------------------------------------
+Enter your choice: 
+3
+Type base value: 4
+(Positive Integers Only) Raised to a power of: 5
+The calculated value: 1024
+
+
+
+-------------------------------------
+1. Print Reverse
+2. Calculate E
+3. Calculate exponent
+4. Quit program
+-------------------------------------
+Enter your choice: 
+4
+The Program has ended.

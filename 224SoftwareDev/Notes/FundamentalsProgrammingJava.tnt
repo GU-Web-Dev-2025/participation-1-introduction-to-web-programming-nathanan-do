@@ -1,0 +1,35 @@
+Functions are needded in a class
+basic struct:
+
+public class Main{              // Class (NAME NEEDDS TO MATCH FILE NAME, CASE SENSITIVE) - Pascal 
+    public void main (){        // Function - camel
+
+
+    }
+}
+
+STEPS TO BUILDING YOUR OWN PROGRAM:
+1. Variables & Constants
+2. Primitive and Reference Types
+3. Casting
+4. Numbers, Strings, Arrays
+5. User Input
+
+
+1. Variables
+int age = 30;
+-byte, short, long, float, double, char
+
+Primitive vs Reference
+storage for simple values vs storage for complex values
+
+String message = "HelloWorld";
+String message = "HelloWorld" + "!!";
+System.out.println(message);
+
+dot.operator
+message.endsWith("!!");
+or System.out.println(message.endsWith("!!"));
+.length() // spaces matter++
+.indexOf("H") // finds the letter (or string?) and tells where it is at - if no find, -1
+.replace("target", "replacement")

@@ -1,0 +1,7 @@
+sorting algorithms
+- Bubble sort
+- insertion sort
+- linear search
+- binary search
+
+Big "O" notation (worst case senario)

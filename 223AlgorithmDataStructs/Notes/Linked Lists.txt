@@ -1,0 +1,31 @@
+- Remember, linked lists are connected via NODES
+- looks like
+struct Node{
+    int value;
+    Node *next;
+}
+
+- linked lists are a collection of nodes, first node being the HEAD
+- NODES are accesed through the previous node, through a pointer
+head->value (for the first passthrough)
+head->next->value (to keep passing through)
+
+interators (chooses which NODE to go to, bypass passthrough)
+
+functions for LL (Linkedlist::pushback)
+pushback
+isempty
+search
+at
+
+Doubly-linked lists 
+(Why?) - traverse back and forward
+*look up "catch and try"
+
+tail pointers: like the head of the linked-list, but at the end
+these pointers (head & tail) point to nullptr because nothing can be pointed back to the pointer (as it's a pointer and cannot be assigned a value)
+
+p: pointer
+x: nullptr
+o: any value
+hp-> xop-> <-pox <-tp

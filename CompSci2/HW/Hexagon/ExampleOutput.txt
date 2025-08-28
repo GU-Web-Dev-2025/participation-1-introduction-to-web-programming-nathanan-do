@@ -1,0 +1,102 @@
+g++ main.cpp hexagon.cpp -o hexagonProgram
+./hexagonProgram
+**************************
+TESTING: Copy Constructor 
+**************************
+
+**************************
+Printing Hexagons Before: 
+
+*------------------------*
+Hexagon: h1
+Side Length: 5
+Area: 64.9519
+Color: Purple
+
+
+*------------------------*
+Hexagon: h2
+Side Length: 5
+Area: 64.9519
+Color: Purple
+
+
+*------------------------*
+Hexagon: h3
+Side Length: 5
+Area: 64.9519
+Color: Purple
+
+**************************
+Printing Hexagons After: 
+
+*------------------------*
+Hexagon: h1
+Side Length: 5
+Area: 64.9519
+Color: Red
+
+
+*------------------------*
+Hexagon: h2
+Side Length: 5
+Area: 64.9519
+Color: Green
+
+
+*------------------------*
+Hexagon: h3
+Side Length: 5
+Area: 64.9519
+Color: Blue
+
+**************************
+TESTING: Assignment Operator
+**************************
+
+**************************
+Printing Hexagons Before: 
+
+*------------------------*
+Hexagon: h1
+Side Length: 1
+Area: 2.59808
+Color: Grey
+
+
+*------------------------*
+Hexagon: h2
+Side Length: 2
+Area: 10.3923
+Color: Teal
+
+
+*------------------------*
+Hexagon: h3
+Side Length: 3
+Area: 23.3827
+Color: Yellow
+
+**************************
+Printing Hexagons After: 
+
+*------------------------*
+Hexagon: h1
+Side Length: 1
+Area: 2.59808
+Color: No Color
+
+
+*------------------------*
+Hexagon: h2
+Side Length: 1
+Area: 2.59808
+Color: Grey
+
+
+*------------------------*
+Hexagon: h3
+Side Length: 1
+Area: 2.59808
+Color: Grey
+

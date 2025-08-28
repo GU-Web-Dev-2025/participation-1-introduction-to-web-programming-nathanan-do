@@ -1,0 +1,259 @@
+// RESULT 1 (EASY, WIN):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  _______          _      ____        _   _   _       
+ |__   __|        | |    |  _ \      | | | | | |      
+    | | __ _ _ __ | | __ | |_) | __ _| |_| |_| | ___  
+    | |/ _` | '_ \| |/ / |  _ < / _` | __| __| |/ _ \ 
+    | | (_| | | | |   <  | |_) | (_| | |_| |_| |  __/ 
+    |_|\__,_|_| |_|_|\_\ |____/ \__,_|\__|\__|_|\___| 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Choose your diffuculty: 
+A) EASY
+B) NORMAL
+C) HARD
+Choice: a
+Your objective is to hit a tank placed between 100-200 units away.
+You are placed at 0 units. You have 3 attempts to hit the tank or else, YOU LOSE.
+
+You chose 'EASY' difficulty, your shot has to land within 20 units from the tank.
+
+ROUND: 1
+Choose an angle (in deggrees) to shoot from: 0
+Choose a velocity to shoot from: 150
+
+Your shot lannded at 150 units.
+DIRECT HIT
+The tank was located at 163 units. Congrats. YOU WON!
+
+The game has ended with you victorious!
+
+
+
+// RESULT 2 (EASY, LOSE):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  _______          _      ____        _   _   _       
+ |__   __|        | |    |  _ \      | | | | | |      
+    | | __ _ _ __ | | __ | |_) | __ _| |_| |_| | ___  
+    | |/ _` | '_ \| |/ / |  _ < / _` | __| __| |/ _ \ 
+    | | (_| | | | |   <  | |_) | (_| | |_| |_| |  __/ 
+    |_|\__,_|_| |_|_|\_\ |____/ \__,_|\__|\__|_|\___| 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Choose your diffuculty: 
+A) EASY
+B) NORMAL
+C) HARD
+Choice: a
+Your objective is to hit a tank placed between 100-200 units away.
+You are placed at 0 units. You have 3 attempts to hit the tank or else, YOU LOSE.
+
+You chose 'EASY' difficulty, your shot has to land within 20 units from the tank.
+
+ROUND: 1
+Choose an angle (in deggrees) to shoot from: 3
+Choose a velocity to shoot from: 100
+
+Your shot lannded at 99 units.
+SHOT LANDED SHORT
+
+You chose 'EASY' difficulty, your shot has to land within 20 units from the tank.
+
+ROUND: 2
+Choose an angle (in deggrees) to shoot from: 50
+Choose a velocity to shoot from: 100
+
+Your shot lannded at 64 units.
+SHOT LANDED SHORT
+
+You chose 'EASY' difficulty, your shot has to land within 20 units from the tank.
+
+ROUND: 3
+Choose an angle (in deggrees) to shoot from: 75
+Choose a velocity to shoot from: 200
+
+Your shot lannded at 51 units.
+SHOT LANDED SHORT
+
+You lost.
+The tank was located at 165 units.
+
+
+
+
+// RESULT 3 (NORMAL, WIN):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  _______          _      ____        _   _   _       
+ |__   __|        | |    |  _ \      | | | | | |      
+    | | __ _ _ __ | | __ | |_) | __ _| |_| |_| | ___  
+    | |/ _` | '_ \| |/ / |  _ < / _` | __| __| |/ _ \ 
+    | | (_| | | | |   <  | |_) | (_| | |_| |_| |  __/ 
+    |_|\__,_|_| |_|_|\_\ |____/ \__,_|\__|\__|_|\___| 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Choose your diffuculty: 
+A) EASY
+B) NORMAL
+C) HARD
+Choice: b
+Your objective is to hit a tank placed between 100-200 units away.
+You are placed at 0 units. You have 3 attempts to hit the tank or else, YOU LOSE.
+
+You chose 'NORMAL' difficulty, your shot has to land within 10 units from the tank.
+
+ROUND: 1
+Choose an angle (in deggrees) to shoot from: 0
+Choose a velocity to shoot from: 150
+
+Your shot lannded at 150 units.
+SHOT LANDED OVER
+
+You chose 'NORMAL' difficulty, your shot has to land within 10 units from the tank.
+
+ROUND: 2
+Choose an angle (in deggrees) to shoot from: 0
+Choose a velocity to shoot from: 125
+
+Your shot lannded at 125 units.
+DIRECT HIT
+The tank was located at 127 units. Congrats. YOU WON!
+
+The game has ended with you victorious!
+
+
+
+// RESULT 4 (NORMAL, LOSE):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  _______          _      ____        _   _   _       
+ |__   __|        | |    |  _ \      | | | | | |      
+    | | __ _ _ __ | | __ | |_) | __ _| |_| |_| | ___  
+    | |/ _` | '_ \| |/ / |  _ < / _` | __| __| |/ _ \ 
+    | | (_| | | | |   <  | |_) | (_| | |_| |_| |  __/ 
+    |_|\__,_|_| |_|_|\_\ |____/ \__,_|\__|\__|_|\___| 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Choose your diffuculty: 
+A) EASY
+B) NORMAL
+C) HARD
+Choice: b
+Your objective is to hit a tank placed between 100-200 units away.
+You are placed at 0 units. You have 3 attempts to hit the tank or else, YOU LOSE.
+
+You chose 'NORMAL' difficulty, your shot has to land within 10 units from the tank.
+
+ROUND: 1
+Choose an angle (in deggrees) to shoot from: 90
+Choose a velocity to shoot from: 1000
+
+Your shot lannded at 0 units.
+SHOT LANDED SHORT
+
+You chose 'NORMAL' difficulty, your shot has to land within 10 units from the tank.
+
+ROUND: 2
+Choose an angle (in deggrees) to shoot from: 35
+Choose a velocity to shoot from: 300
+
+Your shot lannded at 245 units.
+SHOT LANDED OVER
+
+You chose 'NORMAL' difficulty, your shot has to land within 10 units from the tank.
+
+ROUND: 3
+Choose an angle (in deggrees) to shoot from: 10
+Choose a velocity to shoot from: 120
+
+Your shot lannded at 118 units.
+SHOT LANDED SHORT
+
+You lost.
+The tank was located at 134 units.
+
+
+
+// RESULT 5 (HARD, WIN):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  _______          _      ____        _   _   _       
+ |__   __|        | |    |  _ \      | | | | | |      
+    | | __ _ _ __ | | __ | |_) | __ _| |_| |_| | ___  
+    | |/ _` | '_ \| |/ / |  _ < / _` | __| __| |/ _ \ 
+    | | (_| | | | |   <  | |_) | (_| | |_| |_| |  __/ 
+    |_|\__,_|_| |_|_|\_\ |____/ \__,_|\__|\__|_|\___| 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Choose your diffuculty: 
+A) EASY
+B) NORMAL
+C) HARD
+Choice: c
+Your objective is to hit a tank placed between 100-200 units away.
+You are placed at 0 units. You have 3 attempts to hit the tank or else, YOU LOSE.
+
+You chose 'HARD' difficulty, your shot has to land within 5 units from the tank.
+
+ROUND: 1
+Choose an angle (in deggrees) to shoot from: 0
+Choose a velocity to shoot from: 150
+
+Your shot lannded at 150 units.
+DIRECT HIT
+The tank was located at 149 units. Congrats. YOU WON!
+
+The game has ended with you victorious!
+
+
+
+// RESULT 6 (HARD, LOSE):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  _______          _      ____        _   _   _       
+ |__   __|        | |    |  _ \      | | | | | |      
+    | | __ _ _ __ | | __ | |_) | __ _| |_| |_| | ___  
+    | |/ _` | '_ \| |/ / |  _ < / _` | __| __| |/ _ \ 
+    | | (_| | | | |   <  | |_) | (_| | |_| |_| |  __/ 
+    |_|\__,_|_| |_|_|\_\ |____/ \__,_|\__|\__|_|\___| 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Choose your diffuculty: 
+A) EASY
+B) NORMAL
+C) HARD
+Choice: c
+Your objective is to hit a tank placed between 100-200 units away.
+You are placed at 0 units. You have 3 attempts to hit the tank or else, YOU LOSE.
+
+You chose 'HARD' difficulty, your shot has to land within 5 units from the tank.
+
+ROUND: 1
+Choose an angle (in deggrees) to shoot from: 0
+Choose a velocity to shoot from: 120
+
+Your shot lannded at 120 units.
+SHOT LANDED SHORT
+
+You chose 'HARD' difficulty, your shot has to land within 5 units from the tank.
+
+ROUND: 2
+Choose an angle (in deggrees) to shoot from: 15
+Choose a velocity to shoot from: 160
+
+Your shot lannded at 154 units.
+SHOT LANDED SHORT
+
+You chose 'HARD' difficulty, your shot has to land within 5 units from the tank.
+
+ROUND: 3
+Choose an angle (in deggrees) to shoot from: 20
+Choose a velocity to shoot from: 99
+
+Your shot lannded at 93 units.
+SHOT LANDED SHORT
+
+You lost.
+The tank was located at 169 units.

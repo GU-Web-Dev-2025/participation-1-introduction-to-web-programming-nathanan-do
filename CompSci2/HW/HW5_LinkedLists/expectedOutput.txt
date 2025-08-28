@@ -1,0 +1,161 @@
+g++ -Wall --std=c++11 maintest.cpp LinkedList.cpp -o LinkedListProgram
+./LinkedListProgram
+Test Default Constructor:
+PASS
+Expected: nullptr
+Actual: nullptr
+
+Test Parameterized Constructor:
+PASS
+Expected: 10->nullptr
+Actual: 10->nullptr
+
+Test addToEnd:
+PASS
+Expected: 5->10->15->nullptr
+Actual: 5->10->15->nullptr
+
+Test contains (5 exists):
+PASS
+Expected: true
+Actual: true
+
+Test contains (15 does not exist):
+PASS
+Expected: false
+Actual: false
+
+Test removeValue (10 removed):
+PASS
+Expected: 5->15->nullptr
+Actual: 5->15->nullptr
+
+Test removeValue (5 removed):
+PASS
+Expected: 15->nullptr
+Actual: 15->nullptr
+
+Test removeValue (15 removed, list empty):
+PASS
+Expected: nullptr
+Actual: nullptr
+
+Test insertValue (2 at index 1):
+PASS
+Expected: 1->2->3->5->nullptr
+Actual: 1->2->3->5->nullptr
+
+Test insertValue (4 at index 3):
+PASS
+Expected: 1->2->3->4->5->nullptr
+Actual: 1->2->3->4->5->nullptr
+
+Test insertValue (0 at index 0):
+PASS
+Expected: 0->1->2->3->4->5->nullptr
+Actual: 0->1->2->3->4->5->nullptr
+
+Test printList (empty list):
+PASS
+Expected: nullptr
+Actual: nullptr
+
+Test printList (single element):
+PASS
+Expected: 1->nullptr
+Actual: 1->nullptr
+
+Test printList (multiple elements):
+PASS
+Expected: 1->2->3->nullptr
+Actual: 1->2->3->nullptr
+
+
+***** SUMMARY *****
+Tests PASSED / FAILED: 14/14 (100%)
+
+valgrind --leak-check=full ./LinkedListProgram
+Test Default Constructor:
+PASS
+Expected: nullptr
+Actual: nullptr
+
+Test Parameterized Constructor:
+PASS
+Expected: 10->nullptr
+Actual: 10->nullptr
+
+Test addToEnd:
+PASS
+Expected: 5->10->15->nullptr
+Actual: 5->10->15->nullptr
+
+Test contains (5 exists):
+PASS
+Expected: true
+Actual: true
+
+Test contains (15 does not exist):
+PASS
+Expected: false
+Actual: false
+
+Test removeValue (10 removed):
+PASS
+Expected: 5->15->nullptr
+Actual: 5->15->nullptr
+
+Test removeValue (5 removed):
+PASS
+Expected: 15->nullptr
+Actual: 15->nullptr
+
+Test removeValue (15 removed, list empty):
+PASS
+Expected: nullptr
+Actual: nullptr
+
+Test insertValue (2 at index 1):
+PASS
+Expected: 1->2->3->5->nullptr
+Actual: 1->2->3->5->nullptr
+
+Test insertValue (4 at index 3):
+PASS
+Expected: 1->2->3->4->5->nullptr
+Actual: 1->2->3->4->5->nullptr
+
+Test insertValue (0 at index 0):
+PASS
+Expected: 0->1->2->3->4->5->nullptr
+Actual: 0->1->2->3->4->5->nullptr
+
+Test printList (empty list):
+PASS
+Expected: nullptr
+Actual: nullptr
+
+Test printList (single element):
+PASS
+Expected: 1->nullptr
+Actual: 1->nullptr
+
+Test printList (multiple elements):
+PASS
+Expected: 1->2->3->nullptr
+Actual: 1->2->3->nullptr
+
+
+***** SUMMARY *****
+Tests PASSED / FAILED: 14/14 (100%)
+
+==433==
+==433== HEAP SUMMARY:
+==433==     in use at exit: 0 bytes in 0 blocks
+==433==   total heap usage: 29 allocs, 29 frees, 74,280 bytes allocated
+==433==
+==433== All heap blocks were freed -- no leaks are possible
+==433==
+==433== Use --track-origins=yes to see where uninitialised values come from
+==433== For lists of detected and suppressed errors, rerun with: -s
+==433== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

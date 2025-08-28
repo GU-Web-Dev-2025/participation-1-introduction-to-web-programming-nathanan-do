@@ -1,0 +1,49 @@
+-Dynamic Arrays
+-Complexity Thoery
+-Amortized Analysis
+
+Dynamic Arrays (VECTORS)
+vector<int> name = {4, 34, 763, 1243}
+int *ptr = name;
+ptr[2] == *(ptr+2)
+
+array size functions: size, max_size, capacity, shrink_to_fit, reserve, resize
+when size exceed capacity, we resize
+
+
+Big-O Notation
+and complexity classes f(n) and g(n), 0, c
+THERE IS A (backwards E) c+N s.t. all values of (upside-down A) n > N, c*f(n) >= g(n)
+
+
+FInd the complexity class of the following
+c*f(n) >= g(n)
+g(n) = 4298248295 = f(n)
+- f(n) = 1
+- c = greater than g(n) (5 billion)
+- N = 0
+
+g(n) == c*f(n)
+2n^2*(logn+nlogn) == 0 * n^3 * logn
+
+5n^2/2n+10 == 
+fina c+f(n) >= 5n^2/2n+10
+
+
+Sizes of Complexity classes (ordered smallest to largest)
+0(1)        IMPORTANT
+0(logn)     IMPORTANT
+0(n)        IMPORTANT
+0(nlogn)    IMPORTANT
+0(n^2)      IMPORTANT
+0(n^2logn)
+0(n^3)
+0(2^n)
+0(3^n)
+0(n!)       
+0(n^n)      IMPORTANT
+
+
+Best Case vs Worst Case vs Average Case
+Average:
+what is average? Average over what? Probalbility of same case

@@ -1,0 +1,72 @@
+# Variable register
+# length	    %eax
+# width	        %ebx
+# height	    %ecx
+# gallons	    %edx
+# rpm	        %esi
+# horsepower	%edi
+# meters	    %r8d
+# seconds	    %r9d
+# mph	        %r10d
+# x         	%r11d
+
+.global _start
+.text
+_start:
+
+# --- Calculate gallons = (length * width * height) / 231 ---
+    movl    $24, %eax        # length
+    movl    $12, %ebx        # width
+    movl    $16, %ecx        # height
+    imull   %ebx, %eax       # length * width → %eax
+    imull   %ecx, %eax       # result * height → %eax
+    movl    $231, %ebx       # divisor
+    movl    %eax, %edx       # copy result to %edx for division
+    xorl    %eax, %eax       # clear %eax to avoid junk in high bits
+    movl    %edx, %eax       # move dividend into %eax for division
+    xorl    %edx, %edx       # clear remainder
+    divl    %ebx             # %eax = quotient → gallons
+    movl    %eax, %edx       # gallons stored in %edx
+
+# --- Calculate horsepower = (((rpm - 2000)^2) / 150000) - 15 ---
+    movl    $5000, %esi      # rpm
+    subl    $2000, %esi      # rpm - 2000
+    movl    %esi, %edi
+    imull   %esi, %edi       # (rpm - 2000)^2 → %edi
+
+    movl    $150000, %ecx    # divisor
+    movl    %edi, %eax       # dividend
+    xorl    %edx, %edx
+    divl    %ecx             # horsepower = %eax
+    subl    $15, %eax        # subtract 15
+    movl    %eax, %edi       # horsepower stored in %edi
+
+# --- Calculate mph = (3600 * meters) / (1609 * seconds) ---
+    movl    $5000, %r8d      # meters
+    movl    $960, %r9d       # seconds
+    movl    $3600, %eax
+    imull   %r8d, %eax       # 3600 * meters → %eax
+
+    movl    $1609, %ebx
+    imull   %r9d, %ebx       # 1609 * seconds → %ebx
+    movl    %eax, %r10d      # dividend
+    movl    %r10d, %eax
+    xorl    %edx, %edx
+    divl    %ebx             # (3600 * meters) / (1609 * seconds)
+    movl    %eax, %r10d      # mph stored in %r10d
+
+# --- Calculate x = ((17 * 23) / 3) % 3 ---
+    movl    $17, %eax
+    imull   $23, %eax        # 17 * 23
+    movl    $3, %ebx
+    xorl    %edx, %edx
+    divl    %ebx             # quotient in %eax, remainder in %edx
+    movl    %eax, %eax       # (17 * 23) / 3
+    xorl    %edx, %edx
+    divl    %ebx             # ((17*23)/3) % 3 → %edx
+    movl    %edx, %r11d      # x = remainder → %r11d
+
+# --- Exit program ---
+    mov     $60, %rax
+    xor     %rdi, %rdi
+    syscall

@@ -1,0 +1,9 @@
+Encapsulation, for classes
+Class contains: methods & attributes
+
+after creating a class, the class can have custom attributes
+eg. class player
+player.maxHealth
+player.level
+player.currentHealth
+

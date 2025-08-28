@@ -1,0 +1,26 @@
+.global _start
+.text
+_start:
+                                    # Modify 'H' → 'h' at message[0]
+    movb    message(%rip), %al      # Load byte at message[0]
+    addb    $0x20, %al              # 'H' (0x48) + 0x20 = 'h' (0x68)
+    movb    %al, message(%rip)      # Store back
+
+                                    # Modify 'e' → 'E' at message[1]
+    movb    1+message(%rip), %al    # Load byte at message[1]
+    subb    $0x20, %al              # 'e' (0x65) - 0x20 = 'E' (0x45)
+    movb    %al, 1+message(%rip)    # Store back
+
+    mov     $1, %rax                # syscall: write
+    mov     $1, %rdi                # stdout
+    lea     message(%rip), %rsi     # address of string
+    mov     $13, %rdx               # string length
+    syscall
+
+                                    # Exit
+    mov     $60, %rax
+    xor     %rdi, %rdi
+    syscall
+
+.section .data
+message: .ascii "Hello World\n\0"

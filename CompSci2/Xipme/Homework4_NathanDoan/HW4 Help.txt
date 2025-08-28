@@ -1,0 +1,14 @@
+Implement a 12-hr clock
+Have a data type for each time variable (hr,min,sec,etc)
+constructor: default - reset to midnight
+
+use lib <cctype>
+access to isdigit
+
+string input "";
+getline(cin(input))'
+if (i=0; i< input;i++){
+if(ifdigit(input[i]){
+}
+else
+}
